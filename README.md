@@ -1,2 +1,0 @@
-# horror-walking-simulator
-walking
