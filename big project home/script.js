@@ -9,6 +9,14 @@ window.onload = function(){
     // console.log(e.key);
   })
 
+   let park = document.getElementById("park");
+   for(let i=-2; i<2; i++){
+     let park2 = park.cloneNode(true);
+     park2.setAttribute("position","0 0 "+(i*10) );
+     scene.appendChild(park2);
+   }
+
+
    this.aptdoor = new door(1.3,-10.3,34.1,1,2.3,0.1,0,0,-20,3);
 
    this.st1door = new door(-4.25,0.9,-41.85,3.5,3.35,0.1,-4.25,0.35,-43,3);

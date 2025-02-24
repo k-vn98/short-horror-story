@@ -40,26 +40,35 @@
       
       </a-assets>
       
-      <a-entity environment="groundYScale:50; playArea:2; ground:fills; fog:55; lightPosition: -10 -5 -0.2"></a-entity>
+      <a-entity environment="ground:flat; fog:0; lightPosition: -10 -5 -0.2"></a-entity>
 
       <!-- <a-sky color="#202020"></a-sky> -->
       <!-- <a-entity light="type: ambient; color: #FFF; intensity: 0.5;"></a-entity> -->
-
+      <a-entity position="0 0 -40">
+        <a-plane rotation="-90" width="20" height="10" position="0 0.01 0" src="#grass-color" color="#3F9B0B" normalMap="#grass-normal" roughness="0.7" roughnessMap="#grass-rough" repeat="20 8" normalTextureRepeat="20 8" roughnessTextureRepeat="20 8"></a-plane>
+        <a-plane class="navmesh" position="0 0 3" rotation="-90" width="7" height="7" visible="false"></a-plane>
+        <a-box width="5" depth="10" height="0.05" position="0 .025 0" src="#pavement-color" color="gray" normalMap="#pavement-normal" roughness="0.7" roughnessMap="#pavement-rough" repeat="5 8" normalTextureRepeat="5 8" roughnessTextureRepeat="5 8"></a-box>
+        <a-box width=".5" depth="10" height="0.075" position="-2.3 .0375 0" src="#pavement-color" color="gray" normalMap="#pavement-normal" roughness="0.7" roughnessMap="#pavement-rough" repeat=".5 8" normalTextureRepeat=".5 8" roughnessTextureRepeat=".5 8"></a-box>
+        <a-box width=".5" depth="10" height="0.075" position="2.3 .0375 0" src="#pavement-color" color="gray" normalMap="#pavement-normal" roughness="0.7" roughnessMap="#pavement-roughness" repeat=".5 8" normalTextureRepeat=".5 8" roughnessTextureRepeat=".5 8"></a-box>
+      </a-entity>
       <!-- park -->
-      <a-plane class="navmesh" position="0 0 -20" rotation="-90" width="7" height="4" visible="false"></a-plane>
-      <a-entity position="0 0 -20">
-        <a-plane rotation="-90" width="20" height="4" position="0 0.01 0" src="#grass-color" color="#3F9B0B" normalMap="#grass-normal" roughness="0.7" roughnessMap="#grass-rough" repeat="20 6" normalTextureRepeat="20 6" roughnessTextureRepeat="20 6"></a-plane>
-        
-        <a-box width="5" depth="4" height="0.05" position="0 .025 0" src="#pavement-color" color="gray" normalMap="#pavement-normal" roughness="0.7" roughnessMap="#pavement-rough" repeat="5 4" normalTextureRepeat="5 4" roughnessTextureRepeat="5 4"></a-box>
-        <a-box width=".5" depth="4" height="0.075" position="-2.3 .0375 0" src="#pavement-color" color="gray" normalMap="#pavement-normal" roughness="0.7" roughnessMap="#pavement-rough" repeat=".5 4" normalTextureRepeat=".5 4" roughnessTextureRepeat=".5 4"></a-box>
-        <a-box width=".5" depth="4" height="0.075" position="2.3 .0375 0" src="#pavement-color" color="gray" normalMap="#pavement-normal" roughness="0.7" roughnessMap="#pavement-roughness" repeat=".5 4" normalTextureRepeat=".5 4" roughnessTextureRepeat=".5 4"></a-box>
+      <a-entity id="park" position="0 0 -30">
+        <a-plane rotation="-90" width="20" height="10" position="0 0.01 0" src="#grass-color" color="#3F9B0B" normalMap="#grass-normal" roughness="0.7" roughnessMap="#grass-rough" repeat="20 8" normalTextureRepeat="20 8" roughnessTextureRepeat="20 8"></a-plane>
+        <a-plane class="navmesh" position="0 0 0" rotation="-90" width="7" height="10" visible="false"></a-plane>
+        <a-box width="5" depth="10" height="0.05" position="0 .025 0" src="#pavement-color" color="gray" normalMap="#pavement-normal" roughness="0.7" roughnessMap="#pavement-rough" repeat="5 8" normalTextureRepeat="5 8" roughnessTextureRepeat="5 8"></a-box>
+        <a-box width=".5" depth="10" height="0.075" position="-2.3 .0375 0" src="#pavement-color" color="gray" normalMap="#pavement-normal" roughness="0.7" roughnessMap="#pavement-rough" repeat=".5 8" normalTextureRepeat=".5 8" roughnessTextureRepeat=".5 8"></a-box>
+        <a-box width=".5" depth="10" height="0.075" position="2.3 .0375 0" src="#pavement-color" color="gray" normalMap="#pavement-normal" roughness="0.7" roughnessMap="#pavement-roughness" repeat=".5 8" normalTextureRepeat=".5 8" roughnessTextureRepeat=".5 8"></a-box>
         <a-gltf-model position="-8 0 0" src="#lamp"></a-gltf-model>
         <a-gltf-model position="8 0 0" src="#lamp"></a-gltf-model>
         <a-light type="point" position="-8 8 0" intensity="0.25" color="#FFF"></a-light>
         <a-light type="point" position="8 8 0" intensity="0.25" color="#FFF"></a-light>
-        <a-gltf-model position="-20 0 0" scale=".65 .65 .65" src="assets/tree/scene.gltf"></a-gltf-model>
-        <a-gltf-model position="18 0 0" scale=".65 .65 .65" src="assets/tree/scene.gltf"></a-gltf-model>
-        
+        <a-gltf-model position="-20 0 -4" scale=".65 .65 .65" src="assets/tree/scene.gltf"></a-gltf-model>
+        <a-gltf-model position="18 0 -4" scale=".65 .65 .65" src="assets/tree/scene.gltf"></a-gltf-model>
+        <a-gltf-model position="-21 0 4" scale=".65 .65 .65" src="assets/tree/scene.gltf"></a-gltf-model>
+        <a-gltf-model position="16 0 4" scale=".65 .65 .65" src="assets/tree/scene.gltf"></a-gltf-model>
+        <a-gltf-model position="-23 0 0" scale=".65 .65 .65" src="assets/tree/scene.gltf"></a-gltf-model>
+        <a-gltf-model position="21 0 0" scale=".65 .65 .65" src="assets/tree/scene.gltf"></a-gltf-model>
+
       </a-entity>
 
       <!-- shop -->
