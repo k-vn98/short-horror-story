@@ -19,6 +19,8 @@
         <a-asset-item id="" src=""></a-asset-item>
         <img id="dot-ch" src="assets/dot-crosshair.png">
 
+        <img id="goku-jumps" src="assets/characters/goku.png">
+
         <img id="grass-color" src="assets/textures/grass/color.png">
         <img id="grass-normal" src="assets/textures/grass/normal.png">
         <img id="grass-rough" src="assets/textures/grass/roughness.png">
@@ -40,7 +42,7 @@
       
       </a-assets>
       
-      <a-entity environment="ground:flat; fog:0; lightPosition: -10 -5 -0.2"></a-entity>
+      <a-entity environment="ground:flat; fog:0.7; lightPosition: -10 -5 -0.2"></a-entity>
 
       <!-- <a-sky color="#202020"></a-sky> -->
       <!-- <a-entity light="type: ambient; color: #FFF; intensity: 0.5;"></a-entity> -->
@@ -60,8 +62,8 @@
         <a-box width=".5" depth="10" height="0.075" position="2.3 .0375 0" src="#pavement-color" color="gray" normalMap="#pavement-normal" roughness="0.7" roughnessMap="#pavement-roughness" repeat=".5 8" normalTextureRepeat=".5 8" roughnessTextureRepeat=".5 8"></a-box>
         <a-gltf-model position="-8 0 0" src="#lamp"></a-gltf-model>
         <a-gltf-model position="8 0 0" src="#lamp"></a-gltf-model>
-        <a-light type="point" position="-8 8 0" intensity="0.25" color="#FFF"></a-light>
-        <a-light type="point" position="8 8 0" intensity="0.25" color="#FFF"></a-light>
+        <a-light type="point" position="-8 8 0" intensity="0.15" color="#FFF"></a-light>
+        <a-light type="point" position="8 8 0" intensity="0.15" decay="1" distance="9.5" color="#FFF"></a-light>
         <a-gltf-model position="-20 0 -4" scale=".65 .65 .65" src="assets/tree/scene.gltf"></a-gltf-model>
         <a-gltf-model position="18 0 -4" scale=".65 .65 .65" src="assets/tree/scene.gltf"></a-gltf-model>
         <a-gltf-model position="-21 0 4" scale=".65 .65 .65" src="assets/tree/scene.gltf"></a-gltf-model>
@@ -83,8 +85,8 @@
       <a-entity position="0 -10 40">
         <a-gltf-model position="0 0.1 0" visible="true" scale="1.15 1.15 1.15" src="#apt" side="double"></a-gltf-model>
         <a-gltf-model class="navmesh" src="#navmesh-glb" visible="false" scale="1.15 1.15 1.15" position="0 0 0"></a-gltf-model>
-        <a-plane rotation="-90" color="black" width="50" height="50"></a-plane>
-        <a-plane position="0 2.7 18" rotation="0 180" src="#skyline" color="" width="15" height="5"></a-plane>
+        <a-plane roughness="0" rotation="-90" color="black" width="50" height="50"></a-plane>
+        <a-image transparent="false" position="0 2.7 15" rotation="0 180" src="#skyline" color="" width="15" height="5"></a-image>
       </a-entity>
 
 
@@ -93,6 +95,7 @@
       <a-entity id="head" camera="near:0.01;" look-controls="pointerLockEnabled: true" position="0 1.65 0">
         <a-cursor visible="false"></a-cursor>
         <a-image transparent="true" id="crosshair" scale="0.000078125 0.000078125 0.000078125" src="#dot-ch" position="0 0 -.0125"></a-image>
+        <a-image visible="false" id="jumpscare" scale=".5 .5 .5" src="#goku-jumps" position="0 0 -0.25"></a-image>
       </a-entity>
 
 
