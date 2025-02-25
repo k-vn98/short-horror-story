@@ -15,7 +15,7 @@ class door{
     this.obj = document.createElement("a-box");
     this.interact = false;
     this.obj.addEventListener("click", ()=>{
-		  console.log("Interacted with object");
+		  //console.log("Interacted with object");
       if (distance(p1,this.obj)<this.r){this.interact = true;}
 	  })
     this.obj.setAttribute("visible",false); // hide object, toggle for debugging
@@ -30,7 +30,7 @@ class door{
     if(this.interact){
       p1.setAttribute("position",{x:this.px, y:this.py, z:this.pz});
       p1.setAttribute("simple-navmesh-constraint","navmesh:.navmesh;fall:0.5;height:1;exclude:.navmesh-hole");
-      console.log("Object left");
+      //console.log("Object left");
       this.interact = false;
       p1.setAttribute("simple-navmesh-constraint","navmesh:.navmesh;fall:0.5;height:0;exclude:.navmesh-hole");
     }
