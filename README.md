@@ -1,3 +1,3 @@
 "game" for CS Career Development
 
-terrible
+this was made like under 3 months i think?
